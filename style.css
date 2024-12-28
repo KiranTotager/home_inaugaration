@@ -1,0 +1,276 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #d4c4fc, #a0a3d6); /* Softer pastel gradient */
+    display: block; /* Allow natural layout */
+    min-height: 100vh; /* Ensure body height is at least the viewport */
+    animation: backgroundAnimation 8s infinite alternate;
+    color: #333; /* Neutral text color */
+}
+
+
+/* Main Content */
+.main-content {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto; /* Center content with margin */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white; /* White background for clarity */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+.header {
+    background: #6f58c1; /* Soft purple for the header */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    animation: slideInDown 1s ease-out;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 3em;
+    animation: slideInDown 1s ease-out;
+}
+
+.header p {
+    margin: 10px 0 0;
+    font-size: 1.3em;
+    animation: fadeInText 2s ease-in-out;
+}
+
+/* Body Styles */
+.body {
+    padding: 20px;
+    text-align: center;
+    animation: fadeInText 2s ease-in-out;
+}
+
+/* Details Section */
+.details p {
+    margin: 15px 0;
+    font-size: 1.3em;
+}
+
+/* Map Container */
+.map-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.map-container h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    animation: fadeInText 2s ease-in-out;
+}
+
+/* Directions Link */
+.directions-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #6f58c1; /* Matching purple for consistency */
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.directions-link:hover {
+    background-color: #4e3a99; /* Slightly darker shade */
+    transform: scale(1.1);
+}
+
+/* Map Container */
+.map-container iframe {
+    width: 100%;
+    height: 200px; /* Reduced size */
+    border: none;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Invitation Card */
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.invitation-card {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #00aeff; /* Optional: Match your theme colors */
+    border-radius: 10px;
+}
+
+/* Animations */
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(135deg, #d4c4fc, #a0a3d6); }
+    100% { background: linear-gradient(135deg, #d4c4fc, #b4b6ea); }
+}
+
+@keyframes fadeInText {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 2.5em;
+    }
+
+    .header p {
+        font-size: 1.2em;
+    }
+
+    .details p {
+        font-size: 1.1em;
+    }
+
+    .map-container iframe {
+        height: 180px;
+    }
+}
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Wrapper for the slides to make them slide horizontally */
+.slides-wrapper {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth horizontal sliding */
+}
+
+.slide {
+    min-width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Dots container for navigation */
+.dots-container {
+    text-align: center;
+    padding: 10px;
+}
+
+.dots-container span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #bbb;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dots-container span.active {
+    background-color: #6f58c1; /* Active dot color */
+}
+
+
+
+/* Fade Animation */
+.fade {
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+/* Contact Details Section */
+.contact-details {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Heading Style */
+.contact-heading {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #9963e0;  /* Header color */
+    text-align: center;
+}
+
+/* Contact Paragraph Style */
+.contact-details p {
+    margin: 10px 0;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Style for Phone Number Links */
+.contact-details a {
+    color: #646263; /* Orange color for phone number links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-details a:hover {
+    color: #2e2d2f;  /* Change color on hover */
+    text-decoration: underline;  /* Underline on hover */
+}
+
+.contact-details strong {
+    color: #b945d0;  /* Dark color for labels */
+    font-weight: bold;
+}
+
+.contact-details .email,
+.contact-details .phone {
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    /* Adjust font size and padding for smaller screens */
+    .contact-details {
+        font-size: 1em;
+        padding: 15px;
+    }
+
+    .contact-heading {
+        font-size: 1.3em;
+    }
+
+    .contact-details p {
+        font-size: 1em;
+    }
+}
